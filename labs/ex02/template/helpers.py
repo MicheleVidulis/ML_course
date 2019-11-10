@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """some helper functions."""
-import numpy as np
 
+import numpy as np
 
 def load_data(sub_sample=True, add_outlier=False):
     """Load data and convert it to the metrics system."""
@@ -24,8 +24,8 @@ def load_data(sub_sample=True, add_outlier=False):
 
     if add_outlier:
         # outlier experiment
-        height = np.concatenate([height, [1.1, 1.2]])
-        weight = np.concatenate([weight, [51.5/0.454, 55.3/0.454]])
+        height = np.concatenate([height, [1.1, 1.2, 1.15, 1.12, 1.04, 1.16]])
+        weight = np.concatenate([weight, [51.5/0.454, 55.3/0.454, 50.0/0.454, 52.5/0.454, 54.5/0.454, 56.5/0.454,]])
 
     return height, weight, gender
 

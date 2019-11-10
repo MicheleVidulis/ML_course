@@ -12,8 +12,8 @@ def visualization(y, x, mean_x, std_x, w, save_name):
     # plot raw data
     x = de_standardize(x, mean_x, std_x)
     ax1 = fig.add_subplot(1, 2, 1)
-    males = np.where(y == 1)
-    females = np.where(y == 0)
+    males = np.where(y == 0)
+    females = np.where(y == 1)
     ax1.scatter(
         x[males, 0], x[males, 1],
         marker='.', color=[0.06, 0.06, 1], s=20)
